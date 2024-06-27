@@ -1,0 +1,65 @@
+.p {
+    margin: 0 auto;
+    height: 600px;
+    width: 650px;
+    text-align: center;
+  }
+  .p1{
+    margin: 0 auto;
+    height: 550px;
+    width: 700px;
+    text-align: center;
+  }
+
+  .card-img-top {
+    margin: 0 auto;
+    height: 200px;
+    width: 150px;
+  }
+
+  .card {
+    margin: 0 auto;
+    width: 350px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .c {
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+  }
+  .competitions{
+    margin: 0 auto;
+  }
+
+  .input-group-prepend .input-group-text {
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-right: 0;
+  }
+  
+  #search-input {
+    border-left: 0;
+  }
+  
+  #suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none; 
+  }
+
+  #suggestions li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  #suggestions li:hover {
+    background-color: #e9e9e9;
+  }

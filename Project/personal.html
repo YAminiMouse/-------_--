@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Личный кабинет пользователя</title>
+    <link rel="stylesheet" href="./css/tenis.css">
+    <link rel="stylesheet" href="./_src/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/acrionsWithAccountUser.css">
+    <link rel="Shortcut Icon" href="img/iso.png" type="image/x-icon">
+</head>
+
+<body style="background-image: linear-gradient(to bottom, #00ffff, #00ffff);">
+    <div style="background-image: linear-gradient(to bottom, #ff00ff, #00ffff);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="background-color: black;">
+        <a class="navbar-brand" href="./main.html" style="color:rgb(204, 49, 204);">SYNANCY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html" style="color: aliceblue;">Контакты</a>
+            </li>
+          </ul>
+    
+        </div>
+      </nav>
+    <div class="container mt-4">
+        <h1>Личный кабинет</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="fullName">ФИО:</label>
+                        <span id="fullNameContainer">
+                            <span id="fullNameValue"></span>
+                            <input type="checkbox" id="changeFullName">
+                        </span>
+                        <input type="text" class="form-control d-none" id="fullNameInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <span id="emailContainer">
+                            <span id="emailValue"></span>
+                            <input type="checkbox" id="changeEmail">
+                        </span>
+                        <input type="email" class="form-control d-none" id="emailInput" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Пол:</label>
+                        <span id="genderContainer">
+                            <span id="genderValue"></span>
+                            <input type="checkbox" id="changeGender">
+                        </span>
+                        <select class="form-control d-none" id="genderInput">
+                            <option value="">Выберите пол</option>
+                            <option value="Мужской">Мужской</option>
+                            <option value="Женский">Женский</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Дата рождения:</label>
+                        <span id="birthDateContainer">
+                            <span id="birthDateValue"></span>
+                            <input type="checkbox" id="changeBirthDate">
+                        </span>
+                        <input type="date" class="form-control d-none" id="birthDateInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Фотография:</label>
+                        <input type="file" class="form-control-file" id="photoInput" accept="image/*"
+                            style="display: none;">
+                        <button type="button" class="btn btn-primary mt-2" id="uploadPhotoButton">Загрузить
+                            фото</button>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="saveChangesButton">Сохранить</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="" id="userPhoto" alt="User Photo" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/actionsWithAccountUser.js"></script>
+    <script src="js/prov.js"></script>
+    <script src="./js/data.js"></script>
+</body>
+
+</html>

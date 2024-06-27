@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNANCY</title>
+  <link rel="Shortcut Icon" href="img/iso.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./_src/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body style="background-image: linear-gradient(to bottom, #ff00ff, #00ffff);">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="background-color: black;">
+    <a class="navbar-brand" href="./main.html" style="color:rgb(204, 49, 204);">SYNANCY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html" style="color: aliceblue;">Контакты</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" style="position: relative;">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="search-icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Поиск мероприятия"
+            aria-label="Search">
+        </div>
+        <ul id="suggestions" class="list-group"></ul>
+      </form>
+      <a class="nav-link disabled" href="#" style="color: aliceblue;" id="btn-login">Войти</a>
+      <a class="nav-link disabled" href="#" style="color: aliceblue;" id="btn-register">Регистрация</a>
+      <a class="nav-link disabled" href="./main.html" style="color: aliceblue;" id="btn-notlogin">Выйти</a>
+      <a class="nav-link disabled" href="personal.html" style="color: aliceblue;" id="btn-kab">Личный кабинет</a>
+
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox" style="background-image: linear-gradient(to bottom, #ff00ff, #00ffff);">
+      <div class="carousel-item active">
+        <div class="p">
+          <a href="https://vk.com/ssc.ispu">
+            <br>
+            <img class="d-block w-100" src="./img/ssk.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="p">
+          <a href="https://vk.com/i_s_p_u?from=search">
+            <br>
+            <img class="d-block w-100" src="./img/unik.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="p">
+          <a href="https://vk.com/wall-217343643_246">
+            <br>
+            <img class="d-block w-100" src="./img/n6puRpTUAkU.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p">
+          <a href="https://vk.com/wall-217343643_267">
+            <br>
+            <img class="d-block w-100" src="./img/8wPV1uHMTrY.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div style="text-align: center;">
+    <p style="background-color: rgb(52, 58, 64); height: 70px; color: aliceblue; text-align: center; ">
+      <br>МЕРОПРИЯТИЯ<br>
+    </p>
+    <img class="competitions" src="img/rings.png" alt="кольца" style="display: inline-block;">
+  </div>
+
+  <div class="container">
+    <div class="row" style="padding-top: 20px; padding-left: 15px">
+      <div class="card event-card" data-date="18.07.2024">
+        <img class="card-img-top" src="./img/fut.jpg" alt="Футбол">
+        <div class="card-body">
+          <h4 class="card-title">Кубок регионов 2024</h4>
+          <p class="card-text">
+            Город: Саранск <br>
+            Начало мероприятия: 18.07.2024
+          </p>
+          <a href="fut.html" class="btn btn-primary">Узнать подробнее</a>
+        </div>
+      </div>
+
+      <div class="card event-card" data-date="15.09.2024">
+        <img class="card-img-top" src="./img/basket.jpg" alt="Баскетбол">
+        <div class="card-body">
+          <h4 class="card-title">Всероссийское соревнование по баскетболу</h4>
+          <p class="card-text">
+            Город: Новосибирск <br>
+            Начало мероприятия: 15.09.2024
+          </p>
+          <a href="basket.html" class="btn btn-primary">Узнать подробнее</a>
+        </div>
+      </div>
+
+      <div class="card event-card" data-date="22.04.2025">
+        <img class="card-img-top" src="./img/sw.jpg" alt="Плавание">
+        <div class="card-body">
+          <h4 class="card-title">Чемпионат России по синхронному плаванию</h4>
+          <p class="card-text">
+            Город: Екатеринбург <br>
+            Начало мероприятия: 22.04.2025
+          </p>
+          <a href="sw.html" class="btn btn-primary">Узнать подробнее</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 30px; padding-left: 15px">
+      <div class="card event-card" data-date="29.06.2024">
+        <img class="card-img-top" src="./img/shah.jpg" alt="Шахматы">
+        <div class="card-body">
+          <h4 class="card-title">Шахматы Фишера в РШШ</h4>
+          <p class="card-text">
+            Город: Москва <br>
+            Начало мероприятия: 29.06.2024
+          </p>
+          <a href="shah.html" class="btn btn-primary">Узнать подробнее</a>
+        </div>
+      </div>
+
+      <div class="card event-card" data-date="26.06.2024">
+        <img class="card-img-top" src="./img/prog.jpg" alt="Спортивное программирование">
+        <div class="card-body">
+          <h4 class="card-title">Всероссийское соревнование по спортивному программированию</h4>
+          <p class="card-text">
+            Город: Оренбург <br>
+            Начало мероприятия: 26.06.2024
+          </p>
+          <a href="prog.html" class="btn btn-primary">Узнать подробнее</a>
+        </div>
+      </div>
+
+      <div class="card event-card" data-date="24.06.2024">
+        <img class="card-img-top" src="./img/tenis.jpg" alt="Теннис">
+        <div class="card-body">
+          <h4 class="card-title">Республиканский турнир по теннису "Лето в Зубово"</h4>
+          <p class="card-text">
+            Город: Уфа, Башкортостан <br>
+            Начало мероприятия: 24.06.2024
+          </p>
+          <a href="tenis.html" class="btn btn-primary">Узнать подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div style="background-color: rgb(52, 58, 64);"><br></div>
+  <div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"
+    style="background-image: linear-gradient(to top, #ff00ff, #00ffff);">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="p1">
+          <a href="https://www.sports.ru/tribuna/blogs/festival/3250418.html">
+            <br>
+            <img class="d-block w-100" src="./img/спорт.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p1">
+          <a
+            href="https://www.sport-express.ru/football/euro/reviews/evro-2024-v-germanii-obokrali-analitikov-sbornoy-shveycarii-chto-ukrali-i-kto-vinoven-2226280/">
+            <br>
+            <img class="d-block w-100" src="./img/спортэкспресс.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p1">
+          <a
+            href="https://news.sportbox.ru/Vidy_sporta/Futbol/spbnews_NI2074659_Smorodskaja_Zenit_sobral_ne_tolko_khoroshih_inostrancev_no_i_talantlivyh_rossijskih_igrokov">
+            <br>
+            <img class="d-block w-100" src="./img/SB.png" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p1">
+          <a
+            href="https://www.championat.com/football/article-5602428-olimpijskij-chempion-1988-i-bronzovyj-prizyor-evro-2008-aleksandr-borodyuk-o-problemah-rossijskogo-futbola-intervyu.html">
+            <br>
+            <img class="d-block w-100" src="./img/чемпионат.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p1">
+          <a href="https://www.sovsport.ru/tennis/articles/a-nole-vyjdet-legendarnogo-serba-obvinili-v-zhulnichestve">
+            <br>
+            <img class="d-block w-100" src="./img/советскийспорт.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p1">
+          <a href="https://rsport.ria.ru/20240626/datsyuk--1955671009.html">
+            <br>
+            <img class="d-block w-100" src="./img/РИА.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p1">
+          <a href="https://sportrbc.ru/news/659649b49a79477023d9e1ea">
+            <br>
+            <img class="d-block w-100" src="./img/РБК.jpg" alt="900x400" style="height: 500px;">
+          </a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselFadeExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselFadeExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="modal" id="registerModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Регистрация</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <div class="form-group">
+                <label for="fullname">ФИО</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Вход</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" class="form-control" id="loginEmail" name="loginEmail" required>
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Пароль</label>
+                <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Войти</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="c">
+      <div class="container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div id="calendar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/sort.js"></script>
+    <script src="./js/otherFunctions.js"></script>
+    <script src="./js/data.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#btn-login').click(function () {
+          $('#loginModal').modal('show');
+        });
+
+        $('#btn-register').click(function () {
+          $('#registerModal').modal('show');
+        });
+
+        $('#registerForm').submit(function (event) {
+          event.preventDefault();
+
+          $('#errorMessages').empty();
+
+          var fullname = $('#fullname').val().trim();
+          var email = $('#email').val().trim();
+          var password = $('#password').val().trim();
+
+          if (fullname === '' || email === '' || password === '') {
+            $('#errorMessages').text('Пожалуйста, заполните все поля.');
+            return;
+          }
+
+          $('#fullname').val('');
+          $('#email').val('');
+          $('#password').val('');
+          $('#registerModal').modal('hide');
+        });
+      });
+
+      var events = [];
+      $('.event-card').each(function () {
+        var event = {
+          name: $(this).find('.card-title').text().trim(),
+          date: $(this).data('date'),
+          city: $(this).find('.card-text').text().split('<br>')[0].split(': ')[1].trim()
+        };
+        events.push(event);
+      });
+
+      function renderSuggestions(filteredEvents) {
+        $('#suggestions').empty();
+        filteredEvents.forEach(event => {
+          $('#suggestions').append('<li class="list-group-item suggestion-item">' + event.name + '</li>');
+        });
+        $('#suggestions').show();
+      }
+
+      function filterEvents(query) {
+        return events.filter(event => event.name.toLowerCase().includes(query.toLowerCase()));
+      }
+
+      $('#search-input').on('input', function () {
+        var query = $(this).val().trim();
+        if (query) {
+          var filteredEvents = filterEvents(query);
+          renderSuggestions(filteredEvents);
+        } else {
+          $('#suggestions').hide();
+          $('.event-card').show();
+        }
+      });
+
+      $(document).on('click', '.suggestion-item', function () {
+        var selectedEventName = $(this).text();
+        $('#search-input').val(selectedEventName);
+        $('#suggestions').hide();
+
+        $('.event-card').each(function () {
+          var eventName = $(this).find('.card-title').text().trim();
+          if (eventName === selectedEventName) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      });
+
+      $('#clear-search').on('click', function () {
+        $('#search-input').val('');
+        $('#suggestions').hide();
+        $('.event-card').show();
+      });
+
+      $(document).on('click', function (e) {
+        if (!$(e.target).closest('#search-input').length && !$(e.target).closest('#suggestions').length) {
+          $('#suggestions').hide();
+        }
+      });
+    </script>
+    <script src="js/prov.js"></script>
+</body>
+
+</html>

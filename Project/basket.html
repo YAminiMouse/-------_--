@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кубок регионов</title>
+    <link rel="stylesheet" href="./css/basket.css">
+    <link rel="stylesheet" href="./_src/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link rel="Shortcut Icon" href="img/iso.png" type="image/x-icon">
+
+</head>
+
+<body style="background-image: linear-gradient(to bottom, #00ffff, #00ffff);">
+    <div style="background-image: linear-gradient(to bottom, #ff00ff, #00ffff);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="background-color: black;">
+        <a class="navbar-brand" href="./main.html" style="color:rgb(204, 49, 204);">SYNANCY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html" style="color: aliceblue;">Контакты</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <div class="media" style="padding-left: 10px; padding-top: 30px; ">
+
+        <img id="myImg" class="d-flex mr-3" src="./img/basket2.jpg" alt="Баскетбол"
+            style="height: 400px; width: 600px; border: 5px solid #947e55;">
+
+        <div class="media-body">
+            <h5 class="mt-0" style="font-size: 32px;">Финал первенства России по баскетболу среди команд юношей до 14
+                лет им. И.И.Едешко</h5>
+            <br> Финал Первенства России по баскетболу среди команд юношей до 14 лет им. И.И. Едешко будет проходить
+            с 15 по 22 сентября 2024 года в Москве (СШОР «Тимирязевская»).<br>
+            16 команд из
+            городов: Москва, Новосибирск, Тула, Химки, Березники, Барнаул, Санкт-
+            Петербург, Самара, Краснодар, Солнечногорск, Пермь.
+            Место проведения: Носибирск
+            <br> <br>
+            <a href="#" class="btn btn-primary">Зарегистрироваться</a>
+        </div>
+        <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog"
+        aria-labelledby="registrationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ваша заявка принята!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="img01">
+            </div>
+        </div>
+        </div>
+        <script src="js/prov.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script>
+            if (storedLoginEmail === '#' && storedLoginPassword === '#') {
+                alert('Для регистрации на соревнование необходимо зарегистрироваться на сайте.');
+            } else {
+                var registerButton = document.querySelector('.btn-primary');
+                registerButton.addEventListener('click', function () {
+                    $('#registrationModal').modal('show');
+                });
+            }  
+        </script>
+        <script>
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            modal.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <script src="js/prov.js"></script>
+
+</body>
+
+</html>
